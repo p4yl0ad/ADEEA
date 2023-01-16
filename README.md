@@ -42,3 +42,13 @@ Or
 ```
 sudo docker run -v /in:/in -v /out:/out -it adexplorersnapshotwatchman /bin/bash # Drop into a shell 
 ```
+
+
+Setup neo4j docker container
+```
+sudo docker run \
+	--publish=7474:7474 --publish=7687:7687 \
+	--volume=$HOME/neo4j/data:/data \
+	--volume=$HOME/neo4j/logs:/logs \
+	neo4j:4.4-community
+```
